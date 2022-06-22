@@ -6,7 +6,7 @@ $base = "avaliacao_mysql";
 $conexao = new mysqli($localBD, $usuarioBD, $senhaBD, $base);
 $idProd=$_GET['idProd'];
 
-$sql="SELECT * FROM produtos INNER JOIN preço WHERE idProd = $idProd";
+$sql="SELECT * FROM produtos INNER JOIN preço on idProd = idPreco WHERE idProd = $idProd";
 
 $result = $conexao->query($sql);
             if ($result->num_rows > 0) {
