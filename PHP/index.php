@@ -38,7 +38,7 @@ $conexao = new mysqli($localBD, $usuarioBD, $senhaBD, $base);
                 <th colspan="2">Opções</th>
             </tr>
             <?php
-            $sql = "SELECT DISTINCT * FROM produtos INNER JOIN preço GROUP BY idProd";
+            $sql = "SELECT DISTINCT * FROM produtos INNER JOIN preço";
 
             $result = $conexao->query($sql);
             if ($result->num_rows > 0) {
